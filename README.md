@@ -11,10 +11,15 @@ Se incluye un archivo de python para poder transforma MP4s a CRPTVF
 
 Conversor MP4-CRPTVF:
 ESte archivo posee varios niveles de personalizacion para los CRPTVF
+
 --width ALTURA
+
 --height HEIGHT
+
 --fps FPS = indica la cantidad de fps que el programa extrae del video original y guarda en el CRPTVF
+
 --palette-size (8,16,64,128,256) = elige cuantos colores quieres que tenga la paleta del CRPTVF
+
 --with-audio = al usarlo extre el audio del video original y lo guarda en el CRPTVF
 
 Release V1:
