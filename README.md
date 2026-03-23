@@ -30,4 +30,4 @@ Release V2:
 Esta version ofrece la comodidad de poder descargar los archivos por internet de un servidor propio.
 Una de sus ventaja es que no tendra que almacenar varios CRPTVF con distintas configuraciones de calidad-fludez, si no que podra guardar los videos como mp3s en el servidor y convertiran con las configuraciones elegidas en el cardputer (fps, paletas, audio y resolucion)
 
-No me hago responsable de posibles fallas de seguridad que pueda tener el servidor y la comunicacion entre este y la cardputer.
+No me hago responsable de posibles fallas de seguridad que pueda tener el servidor y la comunicacion entre este y la cardputer. Asi que tome las comunicaciones con su propio riesgo.
