@@ -25,3 +25,9 @@ ESte archivo posee varios niveles de personalizacion para los CRPTVF
 Release V1:
 Esta version solo posee un reproductor de archivos CRPTVF exclusivamente
 Esta version tambien posee configuracion de la interfaz y del navegador
+
+Release V2:
+Esta version ofrece la comodidad de poder descargar los archivos por internet de un servidor propio.
+Una de sus ventaja es que no tendra que almacenar varios CRPTVF con distintas configuraciones de calidad-fludez, si no que podra guardar los videos como mp3s en el servidor y convertiran con las configuraciones elegidas en el cardputer (fps, paletas, audio y resolucion)
+
+No me hago responsable de posibles fallas de seguridad que pueda tener el servidor y la comunicacion entre este y la cardputer.
