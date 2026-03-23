@@ -4,6 +4,7 @@ import subprocess
 import sys
 import uuid
 import threading
+import time
 
 app = Flask(__name__)
 
@@ -209,6 +210,22 @@ def prepare_video():
     )
 
 
+
+def delete_with_retries(path: Path, attempts: int = 10, delay: float = 0.5):
+    for i in range(attempts):
+        try:
+            if path.exists():
+                path.unlink()
+                print(f"[OK] borrado: {path}")
+            return True
+        except PermissionError as e:
+            print(f"[WARN] intento {i+1}/{attempts} - archivo en uso: {path}")
+            time.sleep(delay)
+        except Exception as e:
+            print(f"[WARN] no se pudo borrar {path}: {e}")
+            return False
+    return False
+
 # =========================
 # API: DESCARGA DE ARCHIVO GENERADO
 # =========================
@@ -229,9 +246,11 @@ def download_generated(job_id):
         mimetype="application/octet-stream"
     )
 
-    # quitar del diccionario y borrar poco después
     GENERATED_FILES.pop(job_id, None)
-    schedule_delete(output_file, delay_seconds=1.0)
+
+    @response.call_on_close
+    def _cleanup():
+        delete_with_retries(output_file, attempts=12, delay=0.5)
 
     return response
 
